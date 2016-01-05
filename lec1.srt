@@ -1,0 +1,896 @@
+1
+00:00:00,000 --> 00:00:03,000
+there's more seats on this side
+
+2
+00:00:03,000 --> 00:00:19,000
+for people walking in late. So just to make sure you're in cs231n deep
+
+3
+00:00:19,000 --> 00:00:23,000
+learning neural network class for visual recognition. Anybody in the
+
+4
+00:00:23,000 --> 00:00:39,000
+wrong class? Welcome, happy new year happy first day of  
+winter break. This class CS231n is the second offering
+
+5
+00:00:39,000 --> 00:00:48,000
+of this class We have literally doubled our enrolment from 180 people last  
+time we offered to
+
+6
+00:00:48,000 --> 00:00:55,000
+about 350 of you signed up. Just a couple of words to make us all legally
+
+7
+00:00:55,000 --> 00:01:02,000
+covered, we are video recording this class. So, you know, if you're
+
+8
+00:01:02,000 --> 00:01:10,000
+uncomfortable about this for today just go behind that camera or go to the
+
+9
+00:01:10,000 --> 00:01:18,000
+corner where the camera's not gonna turn but we are going to send out forms  
+for you to fill out in terms
+
+10
+00:01:18,000 --> 00:01:25,000
+of allowing video recording so that's just one bit of housekeeping so
+
+11
+00:01:25,000 --> 00:01:32,000
+Alright, so my name is Fei-Fei Li, I'm a professor at the computer science  
+department
+
+12
+00:01:32,000 --> 00:01:37,000
+So this class I'm co-teaching with two senior graduate students and one of  
+them
+
+13
+00:01:37,000 --> 00:01:45,000
+is here. He's Andrej Karpathy. Andrej can you just say hi to everybody we  
+have what I don't think Andrej needs too much
+
+14
+00:01:45,000 --> 00:01:48,000
+introduction all of probably know his work
+
+15
+00:01:48,000 --> 00:01:53,000
+follow his blog his Twitter follower
+
+16
+00:01:53,000 --> 00:02:02,000
+Andrej has way more followers than I do. He's very popular (laughter) And  
+also Justin Johnson who is still
+
+17
+00:02:02,000 --> 00:02:08,000
+travelling internationally but will be back in a few days so Andre and  
+Justin so
+
+18
+00:02:08,000 --> 00:02:14,000
+will be picking up the bulk of the lecture teaching Today I'll be giving
+
+19
+00:02:14,000 --> 00:02:20,000
+the first lecture but as you probably can see that I'm expecting the  
+new-born very soon
+
+20
+00:02:20,000 --> 00:02:28,000
+speaking of weeks so you'll see more of undrained Justin in lecture time we  
+will
+
+21
+00:02:28,000 --> 00:02:34,000
+also introduce a whole team of TAs towards the end of this lecture. Again
+
+22
+00:02:34,000 --> 00:02:38,000
+people who are looking for seats, if you go out of that door and come back,  
+there's
+
+23
+00:02:38,000 --> 00:02:47,000
+a whole bunch of seats on the side. So for this lecture we're going to
+
+24
+00:02:47,000 --> 00:02:53,000
+give the introduction of the class what kind of problems we work on and the
+
+25
+00:02:53,000 --> 00:03:03,000
+tools we'll be learning so again welcome to CS231n this is a vision
+
+26
+00:03:03,000 --> 00:03:09,000
+class it's based on a very specific modelling architecture called neural
+
+27
+00:03:09,000 --> 00:03:16,000
+network and even more specifically mostly on convolution neural network and  
+a lot
+
+28
+00:03:16,000 --> 00:03:23,000
+of you hear this term maybe through a popular press article or 
+
+29
+00:03:23,000 --> 00:03:34,000
+coverage we tend to call this the deep learning network Vision is one of  
+the fastest growing field of
+
+30
+00:03:34,000 --> 00:03:40,000
+artificial intelligence. In fact CISCO has estimated and 
+
+31
+00:03:40,000 --> 00:03:50,000
+(we are on day 4 of this) by 2016, which we already have arrived, more than  
+85% of
+
+32
+00:03:50,000 --> 00:03:56,000
+the internet cyberspace data is in the form of pixels
+
+33
+00:03:56,000 --> 00:04:05,000
+or what they call multimedia so we basically have entered an age of vision
+
+34
+00:04:05,000 --> 00:04:12,000
+of images and videos. And why is this so? while partly to a large extent
+
+35
+00:04:12,000 --> 00:04:20,000
+is because of the explosion of both the Internet as a carrier of data as  
+well as
+
+36
+00:04:20,000 --> 00:04:25,000
+sensors. we have more sensors that the number of people on Earth these days
+
+38
+00:04:25,000 --> 00:04:32,000
+every one of you is carrying some kind of smart phones, digital cameras and
+
+39
+00:04:32,000 --> 00:04:37,000
+you know cars around on the street with cameras so the sensors
+
+40
+00:04:37,000 --> 00:04:46,000
+have really enabled the explosion of visual data on the internet but visual
+
+41
+00:04:46,000 --> 00:04:55,000
+data or pixel data is also the hardest data to harness so if you have heard  
+my
+
+42
+00:04:55,000 --> 00:05:07,000
+previous talks and some other computer vision professors we call this  
+the dark matter of the Internet
+
+43
+00:05:07,000 --> 00:05:13,000
+why is this the dark matter just like the universe is consisted of 85% dark
+
+44
+00:05:13,000 --> 00:05:19,000
+matter dark energy is these matters that energy that is very hard to  
+observe 
+
+45
+00:05:19,000 --> 00:05:25,000
+we can infer it by mathematical models in the universe, on the internet  
+these are the
+
+46
+00:05:25,000 --> 00:05:30,000
+matters pixel data are the data that we don't know we have a hard time
+
+47
+00:05:30,000 --> 00:05:36,000
+grasping the contents Here's one very very simple specs for you to consider
+
+48
+00:05:36,000 --> 00:05:39,000
+so today
+
+49
+00:05:39,000 --> 00:05:49,000
+YouTube servers for every 60 seconds will have more than 150 hours of  
+videos uploaded
+
+50
+00:05:49,000 --> 00:05:54,000
+onto YouTube servers for every 60 seconds
+
+51
+00:05:54,000 --> 00:06:02,000
+think about the amount of data there is no way that human eyes can sift  
+through
+
+52
+00:06:02,000 --> 00:06:07,000
+this massive amount of data and make annotations
+
+53
+00:06:07,000 --> 00:06:14,000
+labelling it and describe the contents Think from the
+
+54
+00:06:14,000 --> 00:06:20,000
+perspective of the YouTube team or Google company if they want to help us
+
+55
+00:06:20,000 --> 00:06:25,000
+to search, index, manage and of course for their purpose put
+
+56
+00:06:25,000 --> 00:06:31,000
+advertisement or whatever manipulate the content of the data were at a loss
+
+57
+00:06:31,000 --> 00:06:38,000
+because nobody can hand annotate this The only hope we can do this is  
+through vision
+
+58
+00:06:38,000 --> 00:06:44,000
+technology, to be able to label the objects find the things, find the  
+frames
+
+59
+00:06:44,000 --> 00:06:50,000
+you know locate where basketball video were Kobe Bryant's making like that
+
+60
+00:06:50,000 --> 00:06:57,000
+awesome shot and so these are the problems we are facing today that the
+
+61
+00:06:57,000 --> 00:07:02,000
+massive amount of data and the challenges of the dark matter so
+
+62
+00:07:02,000 --> 00:07:07,000
+computer vision as a field that touches upon many other fields of
+
+63
+00:07:07,000 --> 00:07:12,000
+studies so I am sure that even sitting here
+
+64
+00:07:12,000 --> 00:07:18,000
+many of you come from computer science but many of you come from biology  
+psychology
+
+65
+00:07:18,000 --> 00:07:24,000
+are specializing in natural language processing or graphics or robotics or
+
+66
+00:07:24,000 --> 00:07:30,000
+or you know medical imaging and so on so as a field computer vision is  
+really a
+
+67
+00:07:30,000 --> 00:07:37,000
+truly interdisciplinary field what the problems we work on the models we  
+use
+
+68
+00:07:37,000 --> 00:07:43,000
+touches engineering physics biology psychology computer science and  
+mathematics
+
+69
+00:07:43,000 --> 00:07:51,000
+so just a little bit of a more personal touch I am the director of the  
+computer vision
+
+70
+00:07:51,000 --> 00:07:58,000
+lab at Stanford in our lab, I work with graduate students and postdocs and  
+even
+
+71
+00:07:58,000 --> 00:08:04,000
+undergraduate students on the number of topics and most dear to our own  
+research
+
+72
+00:08:04,000 --> 00:08:10,000
+who some of them you know Andrej, Justin come from my lab
+
+73
+00:08:10,000 --> 00:08:17,000
+number of TAs come from my lab we work on machine learning which is part
+
+74
+00:08:17,000 --> 00:08:26,000
+a superset of deep learning we work a lot cognitive science and  
+neuroscience as well
+
+75
+00:08:26,000 --> 00:08:31,000
+as the intersection between an NLP and speech so that's the kind of
+
+76
+00:08:31,000 --> 00:08:40,000
+landscape of computer vision research that my lab works in. So also to put  
+things
+
+77
+00:08:40,000 --> 00:08:45,000
+in a little more perspective what other computer vision classes now we  
+offer
+
+78
+00:08:45,000 --> 00:08:51,000
+here at Stanford through the computer science department are clearly you're  
+in
+
+79
+00:08:51,000 --> 00:08:59,000
+this class CS231n so you some of you who have never taken computer vision
+
+80
+00:08:59,000 --> 00:09:06,000
+probably heard of computer vision for the first time probably should have  
+already
+
+81
+00:09:06,000 --> 00:09:14,000
+done cs131 that's a intro class of previous quarter we offer and then and
+
+82
+00:09:14,000 --> 00:09:19,000
+then next quarter which normally is offered this quarter but this year as a
+
+83
+00:09:19,000 --> 00:09:25,000
+little shifted there is an important graduate-level computer vision class
+
+84
+00:09:25,000 --> 00:09:31,000
+called cs231a offered by professor Silvio Savarese who works in robotic
+
+85
+00:09:31,000 --> 00:09:47,000
+3d vision and a lot of you ask us the question that do these replace each  
+other this class CS231n
+
+86
+00:09:47,000 --> 00:09:56,000
+vs CS231a and the answer is no. if you're interested in a broader
+
+87
+00:09:56,000 --> 00:10:03,000
+coverage of tools and topics of computer vision as well as some of the
+
+88
+00:10:03,000 --> 00:10:11,000
+fundamental topics that come that relate you to 3D vision, robotic vision
+
+89
+00:10:11,000 --> 00:10:17,000
+and visual recognition you should consider taking in 231a that is the
+
+90
+00:10:17,000 --> 00:10:26,000
+more general class 231n which we'll go into starting today more deeply  
+focuses
+
+91
+00:10:26,000 --> 00:10:33,000
+on a specific angle of both problem and model Model is neural network and  
+the
+
+92
+00:10:33,000 --> 00:10:38,000
+angle is visual recognition mostly but of course they have a little bit of
+
+93
+00:10:38,000 --> 00:10:47,000
+overlap but that's the major difference And next quarter we also have  
+possibly
+
+94
+00:10:47,000 --> 00:10:55,000
+a couple of advanced seminar level class but that's still in the
+
+95
+00:10:55,000 --> 00:11:01,000
+formation stage so you just have to check the syllabus so that's the kind  
+of computer
+
+96
+00:11:01,000 --> 00:11:11,000
+vision curricula we offer this year at Stanford. Any question so far? yes
+
+97
+00:11:11,000 --> 00:11:20,000
+Is CS131 a strict requirement for this class? CS131 is not a strict  
+requirement for this class but you'll soon see that if you've
+
+98
+00:11:20,000 --> 00:11:25,000
+never heard of computer vision for the first time I suggest you find a way  
+to
+
+99
+00:11:25,000 --> 00:11:33,000
+catch up because this class has assumes a basic level of understanding of
+
+100
+00:11:33,000 --> 00:11:42,000
+computer vision you can browse the notes and so on.
+
+101
+00:11:42,000 --> 00:11:49,000
+A rest of today is that I will give a very brief broad stroke history of  
+computer vision
+
+102
+00:11:49,000 --> 00:11:55,000
+and then we'll talk about 231 and a little bit in terms of the organization
+
+103
+00:11:55,000 --> 00:12:01,000
+of the class I actually really care about sharing with you this brief  
+history of computer
+
+104
+00:12:01,000 --> 00:12:07,000
+vision because you know you might be here primarily because of your  
+interest
+
+105
+00:12:07,000 --> 00:12:11,000
+in this really interesting tool called deep learning and this is the  
+purpose of this class
+
+106
+00:12:11,000 --> 00:12:16,000
+We are offering you an in-depth look and then
+
+107
+00:12:16,000 --> 00:12:22,000
+and just journey through what this deep learning model is but without
+
+108
+00:12:22,000 --> 00:12:28,000
+understanding the problem domain without thinking deeply about what this  
+problem is 
+
+109
+00:12:28,000 --> 00:12:37,000
+it's very hard for you to go on to be an inventor of the next model that
+
+110
+00:12:37,000 --> 00:12:43,000
+really solve the big problem in vision or to be you know developing,
+
+111
+00:12:43,000 --> 00:12:52,000
+making impactful work in solving a hard problem and also in general problem
+
+112
+00:12:52,000 --> 00:12:58,000
+domain and model the modeling tools themselves are never never fully
+
+113
+00:12:58,000 --> 00:13:00,000
+decoupled
+
+114
+00:13:00,000 --> 00:13:05,000
+They inform each other and you'll see through the history of deep learning  
+a little
+
+115
+00:13:05,000 --> 00:13:13,000
+bit that the convolutional neural network architecture come from the need  
+to solve
+
+116
+00:13:13,000 --> 00:13:15,000
+a vision problem
+
+117
+00:13:15,000 --> 00:13:23,000
+And then, vision problem helps the deep learning algorithm to evolve and 
+
+118
+00:13:23,000 --> 00:13:29,000
+back and forth so is really important to you know I want you to finish this  
+course and
+
+119
+00:13:29,000 --> 00:13:34,000
+feel proud that you're student of computer vision and of deep learning so  
+you
+
+120
+00:13:34,000 --> 00:13:39,000
+have this both the toolset and the in-depth understanding of how to use the
+
+121
+00:13:39,000 --> 00:13:46,000
+toolset to tackle important problems so it's a brief history but
+
+122
+00:13:46,000 --> 00:13:54,000
+doesn't mean it's short history so we're gonna go all the way back to 
+
+123
+00:13:54,000 --> 00:14:00,000
+540 million years ago so why did I picked this you know on the scale
+
+124
+00:14:00,000 --> 00:14:09,000
+of Earth history this is a fairly specific range of years while so I don't
+
+125
+00:14:09,000 --> 00:14:14,000
+know if you have heard of this but this is a very very curious period of  
+the
+
+126
+00:14:14,000 --> 00:14:23,000
+Earth's history biologists call this the big bang of evolution Before 
+
+127
+00:14:23,000 --> 00:14:27,000
+540 million years ago
+
+128
+00:14:27,000 --> 00:14:37,000
+the Earth is a very peaceful of its pretty big pond of water so we have  
+very simple organisms
+
+129
+00:14:37,000 --> 00:14:46,000
+these are like animals that just floats in the water and the way they eat  
+and hang out on
+
+130
+00:14:46,000 --> 00:14:53,000
+a daily basis is you know they float and if some kind of food comes by near
+
+131
+00:14:53,000 --> 00:15:01,000
+their mouth or whatever they just open their mouths grabbed it and we don't
+
+132
+00:15:01,000 --> 00:15:09,000
+have too many different types of animals. But something really strange  
+happened around 540
+
+133
+00:15:09,000 --> 00:15:18,000
+million years suddenly from the fossils we study there's a huge explosion  
+of species
+
+134
+00:15:18,000 --> 00:15:27,000
+biologist call speciation like suddenly for some reason something hit the  
+earth that animal
+
+135
+00:15:27,000 --> 00:15:35,000
+start to diversify and they got really complex they really start to have
+
+136
+00:15:35,000 --> 00:15:41,000
+predators and preys and they have all kind of tools to survive what was
+
+137
+00:15:41,000 --> 00:15:46,000
+the triggering force of those was a huge question because people were  
+saying 'Oh you know'
+
+138
+00:15:46,000 --> 00:15:53,000
+'another meteoroid hit the earth' or or you know 'the environment
+
+139
+00:15:53,000 --> 00:16:00,000
+changed' It turned out one of the most convincing theory is by this guy  
+called
+
+140
+00:16:00,000 --> 00:16:03,000
+Andrew Parker
+
+141
+00:16:03,000 --> 00:16:09,000
+he's a modern zoologist in Australia from Australia he studied a lot the
+
+142
+00:16:09,000 --> 00:16:19,000
+fossils and he's theory is that it was the onset of the eyes so one of the  
+first
+
+143
+00:16:19,000 --> 00:16:25,000
+trilobites developed an eye, a really really simple eye it's almost like a
+
+144
+00:16:25,000 --> 00:16:30,000
+pinhole camera that just catches light and make some projections and
+
+145
+00:16:30,000 --> 00:16:34,000
+registers some information from the environment
+
+146
+00:16:34,000 --> 00:16:41,000
+suddenly life is no longer so mellow, because once you have the eye, the  
+first
+
+147
+00:16:41,000 --> 00:16:44,000
+thing you can do is you could go catch food you actually know where food  
+it's
+
+148
+00:16:44,000 --> 00:16:51,000
+you're not just like blind and floating in the water and once you can go  
+catch food
+
+149
+00:16:51,000 --> 00:16:57,000
+guess what the food better develop eyes and to run away from you otherwise
+
+150
+00:16:57,000 --> 00:17:02,000
+they'll be gone you know so the first of all who had had eyes were
+
+151
+00:17:02,000 --> 00:17:11,000
+like in an unlimited buffet, its like working at Google (laughter) and it's  
+just like they have the best time eating
+
+152
+00:17:11,000 --> 00:17:18,000
+everything they can but because those are onset of the eyes what we what  
+the
+
+153
+00:17:18,000 --> 00:17:28,000
+zoologist realized is the biological arms race begin every single animal  
+needs to
+
+154
+00:17:28,000 --> 00:17:34,000
+needs to learn to develop things to survive or to you know you 
+
+
+155
+00:17:34,000 --> 00:17:40,000
+suddenly have preys and predators and all this and the speciation begin so  
+that's
+
+156
+00:17:40,000 --> 00:17:47,000
+when vision begun 540 million years and not only vision begun vision was  
+one
+
+157
+00:17:47,000 --> 00:17:53,000
+of the major driving force of the speciation or that the big bang of
+
+158
+00:17:53,000 --> 00:17:58,000
+evolution so we're not gonna follow evolution with too much detail
+
+159
+00:17:58,000 --> 00:18:08,000
+another big important work that focus on the engineering of vision happened  
+around
+
+160
+00:18:08,000 --> 00:18:19,000
+the Renaissance and of course it's attributed to this amazing guy Leonardo  
+da Vinci so before
+
+170
+00:18:19,000 --> 00:18:23,000
+Renaissance you know throughout human civilization from Asia to Europe to
+
+171
+00:18:23,000 --> 00:18:30,000
+India to Arabic world we have seen models of cameras so Aristotle has
+
+172
+00:18:30,000 --> 00:18:36,000
+proposed the camera through the leaves, Chinese philosopher ?? have  
+proposed
+
+173
+00:18:36,000 --> 00:18:40,000
+the camera through a box with the hole but
+
+174
+00:18:40,000 --> 00:18:47,000
+if you look at the first documentation really modern looking camera it's  
+called
+
+175
+00:18:47,000 --> 00:18:49,000
+camera obscura
+
+176
+00:18:49,000 --> 00:18:56,000
+and that is documented by Leonardo da Vinci I'm not gonna get into the  
+details
+
+177
+00:18:56,000 --> 00:19:07,000
+but this is you know you get the idea that there is some kind of a lens or  
+at least a hole to 
+
+178
+00:19:07,000 --> 00:19:12,000
+capture light reflected from the real world and then there is some kind of
+
+179
+00:19:12,000 --> 00:19:20,000
+projection to capture the information of the real-world image so
+
+180
+00:19:20,000 --> 00:19:27,000
+that's the beginning of the modern you know engineering of
+
+181
+00:19:27,000 --> 00:19:36,000
+vision it started with wanting to copy the world and wanting to make a copy  
+of
+
+182
+00:19:36,000 --> 00:19:42,000
+the visual world it hasn't got anywhere close to wanting to engineer the
+
+183
+00:19:42,000 --> 00:19:46,000
+understanding of the visual world right now we're just talking about  
+duplicating
+
+184
+00:19:46,000 --> 00:19:53,000
+the visual world so that's one important work to remember and of course  
+after
+
+185
+00:19:53,000 --> 00:20:01,000
+camera obscura we start to see a whole series of successful,
+
+186
+00:20:01,000 --> 00:20:07,000
+some film gets developed you know like kodak was one of the first
+
+187
+00:20:07,000 --> 00:20:12,000
+companies developing commercial cameras and then we start to have  
+camcorders and
+
+188
+00:20:12,000 --> 00:20:21,000
+and all this Another very important piece of work that I want you
+
+189
+00:20:21,000 --> 00:20:28,000
+to be aware of as vision student is actually not a engineering work but
+
+190
+00:20:28,000 --> 00:20:32,000
+a science, piece of science work that's starting to ask the question
+
+191
+00:20:32,000 --> 00:20:38,000
+is "how does vision work in our biological brain ?" you know we
+
+192
+00:20:38,000 --> 00:20:45,000
+we now know that it took 540 million years of evolution to get a really
+
+193
+00:20:45,000 --> 00:20:54,000
+fantastic visual system in mammals and humans but what did evolution do  
+during this time
+
+194
+00:20:54,000 --> 00:21:01,000
+what kind of architecture did develop from that simple trilobite eye to  
+today
+
+195
+00:21:01,000 --> 00:21:07,000
+yours and mine while very important piece of work happened at Harvard by
+
+196
+00:21:07,000 --> 00:21:12,000
+two at that time two young two very young ambitious postdocs
+
+197
+00:21:12,000 --> 00:21:21,000
+Hubel and Wiesel what they did is that they used awake but anaesthetized  
+cats and then
+
+198
+00:21:21,000 --> 00:21:28,000
+there was enough technology to build this little needle called electrode to  
+push the
+
+199
+00:21:28,000 --> 00:21:35,000
+electrons through to (the skull is open) into the brain of the cat
+
+200
+00:21:35,000 --> 00:21:42,000
+into an area what we already know called primary visual cortex.
+
+201
+00:21:42,000 --> 00:21:49,000
+primary visual cortex is a area where neurons do a lot of things for visual  
+processing but before
+
+202
+00:21:49,000 --> 00:21:54,000
+Hubel and Wiesel we don't really know what primary visual cortex is doing  
+we just know it's
+
+203
+00:21:54,000 --> 00:22:02,000
+one of the earliest stage other than you eyes of course but earliest stage  
+for visual
+
+204
+00:22:02,000 --> 00:22:07,000
+processing then there is tons and tons of neurons working on vision then we
+
+205
+00:22:07,000 --> 00:22:12,000
+really ought to know what this is because that's the beginning of vision,
+
+206
+00:22:12,000 --> 00:22:20,000
+visual process in the brain so they put this electrode into the primary
+
+207
+00:22:20,000 --> 00:22:25,000
+visual cortex and an interestingly this is another interesting fact if I  
+don't all drop my
+
+208
+00:22:25,000 --> 00:22:34,000
+stuff I'll show you primary visual cortex the first stage or the second,  
+depending on where you come from, I'm being
+
+209
+00:22:34,000 --> 00:22:40,000
+very very rough here, first stage of your cortical visual processing stage  
+is
+
+210
+00:22:40,000 --> 00:22:47,000
+in the back of your brain not near your eye it's very interesting because
+
+211
+00:22:47,000 --> 00:22:51,000
+your olfactory cortical processing is right
+
+212
+00:22:51,000 --> 00:22:58,000
+behind your nose, your auditory is right behind your ear but your primary
