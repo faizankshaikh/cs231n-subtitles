@@ -2531,725 +2531,726 @@ hear that throughout this class
 
 574
 00:59:49,000 --> 00:59:55,000
-we'll make sure you learn to understand the nuances and the
+we'll make sure you learn to understand the nuances and
+
 
 575
-00:59:55,000 --> 00:60:01,000
+00:59:55,000 --> 01:0:01,000
 the details of different flavours of visual recognition what is image
 
 576
-00:60:01,000 --> 00:60:07,000
+01:00:01,000 --> 01:00:07,000
 classification what's object detection what's image captioning and these  
 have
 
 577
-00:60:07,000 --> 00:60:14,000
+01:00:07,000 --> 01:00:14,000
 different flavours for example you know while image classification might
 
 578
-00:60:14,000 --> 00:60:19,000
+01:00:14,000 --> 01:00:19,000
 focus on the whole big image object detection might tell you where things
 
 579
-00:60:19,000 --> 00:60:23,000
+01:00:19,000 --> 01:00:23,000
 exactly are like where the car is the pedestrian
 
 580
-00:60:23,000 --> 00:60:30,000
+01:00:23,000 --> 01:00:30,000
 the hammer and the where the relationship between objects and so on
 
 581
-00:60:30,000 --> 00:60:35,000
+01:00:30,000 --> 01:00:35,000
 there are nuances and details that you will be learning about in this class
 
 582
-00:60:35,000 --> 00:60:43,000
+01:00:35,000 --> 01:00:43,000
 and I already said CNN or convolutional neural network is one type of deep  
 learning
 
 583
-00:60:43,000 --> 00:60:50,000
+01:00:43,000 --> 01:00:50,000
 architecture but it's the overwhelmingly successful deep learning  
 architecture and
 
 584
-00:60:50,000 --> 00:60:54,000
+01:00:50,000 --> 01:00:54,000
 this is the architecture we will be focusing on and to just go back to the
 
 585
-00:60:54,000 --> 00:61:02,000
+01:00:54,000 --> 01:01:02,000
 ImageNet challenge so I said the historical year is 2012 this is the year
 
 586
-00:61:02,000 --> 00:61:14,000
+01:01:02,000 --> 01:01:14,000
 that Alex Krizhevsky and his advisor Jeff Hinton proposed this  
 convolutional neural network I think it's a seven
 
 587
-00:61:14,000 --> 00:61:20,000
+01:01:14,000 --> 01:01:20,000
 layer convolutional your network to win the image that challenge model  
 before
 
 588
-00:61:20,000 --> 00:61:22,000
+01:01:20,000 --> 01:01:22,000
 this year
 
 589
-00:61:22,000 --> 00:61:30,000
+01:01:22,000 --> 01:01:30,000
 a SIFT feature plus support vector machine architecture it still  
 hierarchical
 
 590
-00:61:30,000 --> 00:61:38,000
+01:01:30,000 --> 01:01:38,000
 but it doesn't have that flavour of end to end learning fast forward to 2015
 
 591
-00:61:38,000 --> 00:61:43,000
+01:01:38,000 --> 01:01:43,000
 the winning architecture is still a convolutional neural network it's a
 
 592
-00:61:43,000 --> 00:61:56,000
+01:01:43,000 --> 01:01:56,000
 151 layers by microsoft Asia researchers and it's called
 
 592
-00:61:56,000 --> 00:62:03,000
+01:01:56,000 --> 01:02:03,000
 the residual net so I'm not so sure we're gonna cover
 
 593
-00:62:03,000 --> 00:62:09,000
+01:02:03,000 --> 01:02:09,000
 that definitely don't expect to know every single layer what they do  
 actually
 
 594
-00:62:09,000 --> 00:62:17,000
+01:02:09,000 --> 01:02:17,000
 they repeat itself at hard but every year since 2012 the winning  
 architecture
 
 595
-00:62:17,000 --> 00:62:23,000
+01:02:17,000 --> 01:02:23,000
 of ImageNet challenge is a deep learning based architecture so like I
 
 596
-00:62:23,000 --> 00:62:32,000
+01:02:23,000 --> 01:02:32,000
 said I also want you to respect history CNN is not invented overnight there  
 is a lot
 
 597
-00:62:32,000 --> 00:62:37,000
+01:02:32,000 --> 01:02:37,000
 of influential players today but you know there are a lot of people who  
 build
 
 598
-00:62:37,000 --> 00:62:41,000
+01:02:37,000 --> 01:02:41,000
 a foundation I actually I don't have the slides one important thing to  
 remember
 
 599
-00:62:41,000 --> 00:62:50,000
+01:02:41,000 --> 01:02:50,000
 is ?Kunihiko? Fukushima was a Japanese computer scientist who build a
 
 600
-00:62:50,000 --> 00:62:58,000
+01:02:50,000 --> 01:02:58,000
 model called Neocognitron and that was the beginning of the neural network
 
 601
-00:62:58,000 --> 00:63:04,000
+01:02:58,000 --> 01:03:04,000
 architecture and Yann Lecun is also a very influential person and he's  
 really
 
 602
-00:63:04,000 --> 00:63:10,000
+01:03:04,000 --> 01:03:10,000
 the ground-breaking work in my opinion of Yann Lecun was published in
 
 603
-00:63:10,000 --> 00:63:16,000
+01:03:10,000 --> 01:03:16,000
 the 1990s so that's when mathematicians which Jeff Hinton
 
 604
-00:63:16,000 --> 00:63:22,000
+01:03:16,000 --> 01:03:22,000
 Yann Lecun's PhD adviser was involved worked out the back propagation  
 learning
 
 605
-00:63:22,000 --> 00:63:28,000
+01:03:22,000 --> 01:03:28,000
 strategy which if this work didn't ?? anything Andrej will tell you in a  
 couple
 
 606
-00:63:28,000 --> 00:63:34,000
+01:03:28,000 --> 01:03:34,000
 of weeks but the mathematical model was worked out in the eighties and
 
 607
-00:63:34,000 --> 00:63:40,000
+01:03:34,000 --> 01:03:40,000
 90s and this was Yann Lecun was working for Bell Labs it AT&T which is
 
 608
-00:63:40,000 --> 00:63:47,000
+01:03:40,000 --> 01:03:47,000
 amazing place at that time there's no Bell Labs today anymore that they  
 were
 
 609
-00:63:47,000 --> 00:63:50,000
+01:03:47,000 --> 01:03:50,000
 working on really ambitious projects and he needed to recognize the digits
 
 610
-00:63:50,000 --> 00:63:57,000
+01:03:50,000 --> 01:03:57,000
 because eventually that product was shipped to our banks in the USA post
 
 611
-00:63:57,000 --> 00:64:03,000
+01:03:57,000 --> 01:04:03,000
 office to recognize zip codes and checks and he constructed those 
 
 612
-00:64:03,000 --> 00:64:08,000
+01:04:03,000 --> 01:04:08,000
 convolutional neural network and this is where he's inspired by Hubel and  
 Wiesel he
 
 613
-00:64:08,000 --> 00:64:14,000
+01:04:08,000 --> 01:04:14,000
 starts by looking at simple edge like structures and image it's not like  
 the
 
 614
-00:64:14,000 --> 00:64:20,000
+01:04:14,000 --> 01:04:20,000
 whole letter eight it's really needs to edges and the layer-by-layer
 
 615
-00:64:20,000 --> 00:64:25,000
+01:04:20,000 --> 01:04:25,000
 filters these edges pool them together filters pool and then they build  
 this
 
 616
-00:64:25,000 --> 00:64:36,000
+01:04:25,000 --> 01:04:36,000
 architecture 2012 Alex Krizhevsky and Jeff Hinton used almost exactly the  
 same 
 
 617
-00:64:36,000 --> 00:64:40,000
+01:04:36,000 --> 01:04:40,000
 architecture to participate in the 
 
 618
-00:64:40,000 --> 00:64:47,000
+01:04:40,000 --> 01:04:47,000
 ImageNet challenge there is a few changes but that become the winning
 
 619
-00:64:47,000 --> 00:64:54,000
+01:04:47,000 --> 01:04:54,000
 architecture of this so Andrej will tell you more about the detail changes 
 
 620
-00:64:54,000 --> 00:65:02,000
+01:04:54,000 --> 01:05:02,000
 capacity model did grow a little bit because Moore's Law helped us there's
 
 621
-00:65:03,000 --> 00:65:08,000
+01:05:03,000 --> 01:05:08,000
 also a very very detailed function that change the little bit of a shape  
 for
 
 622
-00:65:08,000 --> 00:65:14,000
+01:05:08,000 --> 01:05:14,000
 most Sigmoid to a Rectified Linear shape but whatever there's a couple of
 
 623
-00:65:14,000 --> 00:65:19,000
+01:05:14,000 --> 01:05:19,000
 small changes but really by and large nothing had changed
 
 624
-00:65:19,000 --> 00:65:26,000
+01:05:19,000 --> 01:05:26,000
 mathematically but important things did change and that drove deep learning
 
 625
-00:65:26,000 --> 00:65:35,000
+01:05:26,000 --> 01:05:35,000
 Architecture back into its Renaissance one is like I said Moore's Law and
 
 626
-00:65:35,000 --> 00:65:41,000
+01:05:35,000 --> 01:05:41,000
 hardware made a huge difference because these are high extremely high
 
 627
-00:65:41,000 --> 00:65:44,000
+01:05:41,000 --> 01:05:44,000
 capacity models When Yann Lecun was doing
 
 628
-00:65:44,000 --> 00:65:50,000
+01:05:44,000 --> 01:05:50,000
 this, it was painfully slow because of the bottleneck of computation he  
 couldn't
 
 629
-00:65:50,000 --> 00:65:55,000
+01:05:50,000 --> 01:05:55,000
 build this model too big a once you can't build it too big it cannot fully
 
 630
-00:65:55,000 --> 00:66:00,000
+01:05:55,000 --> 01:06:00,000
 realize its potential from machine learning standpoint there's overfitting  
 and
 
 631
-00:66:00,000 --> 00:66:07,000
+01:06:00,000 --> 01:06:07,000
 all these problems you can now solve but now we have much faster bigger  
 transistor
 
 632
-00:66:07,000 --> 00:66:16,000
+01:06:07,000 --> 01:06:16,000
 not transistor, microchips and GPUs from NVidia made a huge difference in  
 deep
 
 633
-00:66:16,000 --> 00:66:22,000
+01:06:16,000 --> 01:06:22,000
 learning history that we can now train these models in a reasonable amount
 
 634
-00:66:22,000 --> 00:66:27,000
+01:06:22,000 --> 01:06:27,000
 of time even if they're huge Another thing I think we do need to take  
 credit for
 
 635
-00:66:27,000 --> 00:66:37,000
+01:06:27,000 --> 01:06:37,000
 is data availability of data that was the big data did itself is just you
 
 636
-00:66:37,000 --> 00:66:41,000
+01:06:37,000 --> 01:06:41,000
 know it doesn't mean anything if you don't know how to use it but in this
 
 637
-00:66:41,000 --> 00:66:45,000
+01:06:41,000 --> 01:06:45,000
 deep learning Architecture data become the driving force for high-capacity
 
 638
-00:66:45,000 --> 00:66:52,000
+01:06:45,000 --> 01:06:52,000
 model to enable end-to-end training to help avoid overfitting when
 
 639
-00:66:52,000 --> 00:66:57,000
+01:06:52,000 --> 01:06:57,000
 you have enough data so you know so you if you look at the number of pixels  
 that
 
 640
-00:66:57,000 --> 00:67:05,000
+01:06:57,000 --> 01:07:05,000
 machine learning people had in 2012 versus Yann Lecun having 1998 it's a  
 huge
 
 641
-00:67:05,000 --> 00:67:06,000
+01:07:05,000 --> 01:07:06,000
 difference
 
 642
-00:67:06,000 --> 00:67:14,000
+01:07:06,000 --> 01:07:14,000
 orders of magnitude so this is the focus of 231n
 
 643
-00:67:14,000 --> 00:67:21,000
+01:07:14,000 --> 01:07:21,000
 but will also go oh it's also important one last time I'm drill in this  
 idea
 
 644
-00:67:21,000 --> 00:67:27,000
+01:07:21,000 --> 01:07:27,000
 that visual intelligence does go beyond object recognition I don't want any  
 of
 
 645
-00:67:27,000 --> 00:67:31,000
+01:07:27,000 --> 01:07:31,000
 you coming out of this course thinking "We've done everything you know  
 we've solved vision"
 
 646
-00:67:31,000 --> 00:67:38,000
+01:07:31,000 --> 01:07:38,000
 and the ImageNet challenge defined the entire space of visual recognition  
 it's not true there
 
 647
-00:67:38,000 --> 00:67:44,000
+01:07:38,000 --> 01:07:44,000
 are still a lot of cool problems to solve for example you know dense  
 labelling
 
 648
-00:67:44,000 --> 00:67:51,000
+01:07:44,000 --> 01:07:51,000
 entire scene with perceptual grouping so I know where every single pixel  
 belonged
 
 649
-00:67:51,000 --> 00:67:56,000
+01:07:51,000 --> 01:07:56,000
 that's still ongoing problem, combining
 
 650
-00:67:56,000 --> 00:68:02,000
+01:07:56,000 --> 01:08:02,000
 recognition with 3d is a really there's a lot of excitement happening at  
 the
 
 651
-00:68:02,000 --> 00:68:09,000
+01:08:02,000 --> 01:08:09,000
 intersection of vision and robotics this is definitely one area of that
 
 652
-00:68:09,000 --> 00:68:15,000
+01:08:09,000 --> 01:08:15,000
 and then anything to do with motion ?? and this is another
 
 653
-00:68:15,000 --> 00:68:33,000
+01:08:15,000 --> 01:08:33,000
 big open area of research work I put this here because Justin is heavily  
 involved in this work, beyond putting labels in the scene you actually want
 
 654
-00:68:33,000 --> 00:68:35,000
+01:08:33,000 --> 01:08:35,000
 deeply understand a picture
 
 655
-00:68:35,000 --> 00:68:39,000
+01:08:35,000 --> 01:08:39,000
 what people are doing what are the relationship between objects in then we  
 start getting
 
 656
-00:68:39,000 --> 00:68:45,000
+01:08:39,000 --> 01:08:45,000
 into the relation between objects and this is an ongoing project
 
 657
-00:68:45,000 --> 00:68:49,000
+01:08:45,000 --> 01:08:49,000
 called visual genome in my lab that Justin and the number of my students  
 are
 
 658
-00:68:49,000 --> 00:68:55,000
+01:08:49,000 --> 01:08:55,000
 involved and this goes far beyond image classification of we talked about
 
 659
-00:68:55,000 --> 00:69:03,000
+01:08:55,000 --> 01:09:03,000
 and what is one of our Holy Grails while one of the Holy Grails of computer  
 vision is want
 
 660
-00:69:03,000 --> 00:69:09,000
+01:09:03,000 --> 01:09:09,000
 to be able to tell the story of a scene right so I think about you as a  
 human
 
 661
-00:69:09,000 --> 00:69:11,000
+01:09:09,000 --> 01:09:11,000
 you open your eyes
 
 662
-00:69:11,000 --> 00:69:17,000
+01:09:11,000 --> 01:09:17,000
 the moment you open your eyes you're able to describe what you see in fact  
 in
 
 663
-00:69:17,000 --> 00:69:24,000
+01:09:17,000 --> 01:09:24,000
 psychology experiments we find that even if you show people this picture  
 for only
 
 664
-00:69:24,000 --> 00:69:30,000
+01:09:24,000 --> 01:09:30,000
 five hundred milliseconds that's literally half of the second people who
 
 665
-00:69:30,000 --> 00:69:36,000
+01:09:30,000 --> 01:09:36,000
 write essays about it we pay them $10 an hour so they didn't (laughter)
 
 666
-00:69:36,000 --> 00:69:42,000
+01:09:36,000 --> 01:09:42,000
 it wasn't that long but you know I figure if we talked more money they
 
 667
-00:69:42,000 --> 00:69:47,000
+01:09:42,000 --> 01:09:47,000
 probably could write longer essays but the point is that our visual system  
 is
 
 668
-00:69:47,000 --> 00:69:54,000
+01:09:47,000 --> 01:09:54,000
 extremely powerful we can tell stories and I would dream of this is my  
 challenge to Andrej's
 
 669
-00:69:54,000 --> 00:70:02,000
+01:09:54,000 --> 01:10:02,000
 dissertation that can we give you, give a computer one picture and out  
 comes a
 
 670
-00:70:02,000 --> 00:70:09,000
+01:10:02,000 --> 01:10:09,000
 description like this you know I was getting there you'll see work that  
 give the
 
 671
-00:70:09,000 --> 00:70:15,000
+01:10:09,000 --> 01:10:15,000
 computer one picture, it gives you one sentence or you give the computer  
 one picture it turns 
 
 672
-00:70:15,000 --> 00:70:20,000
+01:10:15,000 --> 01:10:20,000
 into a bunch of short sentences but we're not here yet but that's one of  
 the Holy Grail
 
 673
-00:70:20,000 --> 00:70:26,000
+01:10:20,000 --> 01:10:26,000
 and the other Holy Grail is continuing this i think is
 
 674
-00:70:26,000 --> 00:70:33,000
+01:10:26,000 --> 01:10:33,000
 is summarized really well by Andrej's blog is you know take a picture like  
 this right 
 
 675
-00:70:33,000 --> 00:70:42,000
+01:10:33,000 --> 01:10:42,000
 the stories are so refined there so much nuance in this picture that you  
 get to enjoy not only
 
 676
-00:70:42,000 --> 00:70:47,000
+01:10:42,000 --> 01:10:47,000
 you recognize the ?? it will be very boring if all computer can tell you is
 
 677
-00:70:47,000 --> 00:70:48,000
+01:10:47,000 --> 01:10:48,000
 man man man room scale mirror
 
 678
-00:70:48,000 --> 00:70:58,000
+01:10:48,000 --> 01:10:58,000
 whatever cabinet locker that's it you know here you recognize what they
 
 679
-00:70:58,000 --> 00:71:00,000
+01:10:58,000 --> 01:11:00,000
 are recognized the trick
 
 680
-00:71:00,000 --> 00:71:06,000
+01:11:00,000 --> 01:11:06,000
 Obama is doing you recognize the kind of interaction you recognize the  
 humour you
 
 681
-00:71:06,000 --> 00:71:11,000
+01:11:06,000 --> 01:11:11,000
 recognize there's just so much nuance that this is what the world is about  
 we
 
 682
-00:71:11,000 --> 00:71:18,000
+01:11:11,000 --> 01:11:18,000
 used our ability to visual understanding to not only survive navigate  
 manipulate
 
 683
-00:71:18,000 --> 00:71:26,000
+01:11:18,000 --> 01:11:26,000
 but we use it to socialize to entertain to understand, to learn the world  
 and
 
 684
-00:71:26,000 --> 00:71:32,000
+01:11:26,000 --> 01:11:32,000
 this is where vision, grand goals of vision that is so and I
 
 685
-00:71:32,000 --> 00:71:39,000
+01:11:32,000 --> 01:11:39,000
 don't need to convince you that computer visual technology will make our  
 world a
 
 686
-00:71:39,000 --> 00:71:46,000
+01:11:39,000 --> 01:11:46,000
 better place despite some scary talks out there you know even ??
 
 687
-00:71:46,000 --> 00:71:51,000
+01:11:46,000 --> 01:11:51,000
 today in the industry as well as research world we're using computer
 
 688
-00:71:51,000 --> 00:71:58,000
+01:11:51,000 --> 01:11:58,000
 vision to build better robots to save lives to go deep exploring and all  
 this now
 
 689
-00:71:58,000 --> 00:72:02,000
+01:11:58,000 --> 01:12:02,000
 ok so I have like what two minutes 3?, 5 minutes left
 
 670
-00:72:02,000 --> 00:72:10,000
+01:12:02,000 --> 01:12:10,000
 great time let me introduce the team Andrej and Justin are the co- 
 instructors with
 
 671
-00:72:10,000 --> 00:72:16,000
+01:12:10,000 --> 01:12:16,000
 me TAs please stand up to say hi everybody
 
 672
-00:72:22,000 --> 00:72:16,000
+01:12:22,000 --> 01:12:16,000
 can you like just say your name quickly and you're like what year just  
 don't give
 
 673
-00:72:16,000 --> 00:72:20,000
+01:12:16,000 --> 01:12:20,000
 a speech but yes ?? ??
 
 674
-00:72:49,000 --> 00:73:12,000
+01:12:49,000 --> 01:13:12,000
 Cool so these are the heroes behind the scene and please stay in touch with  
 us, there are two really the best way and almost want to say the only way  
 and i'll tell you what's the exception. Stay in touch through piazza.
 
 675
-00:73:12,000 --> 00:73:32,000
+01:13:12,000 --> 01:13:32,000
 Anything course related please please do not send any of us personal emails  
 because I'm just gonna say this, If you dont hear replies or your issues  
 are not solved I'm really sorry because this is a 300+ peoples class
 
 676
-00:73:32,000 --> 00:73:42,000
+01:13:32,000 --> 01:13:42,000
 Our this mailing list actually tags our emails and helps us to process. The  
 only time I respect you to send a personal email mostly to me and Andrej  
 and Justin is 
 
 677
-00:73:42,000 --> 00:74:04,000
+01:13:42,000 --> 01:14:04,000
 confidential personal issues. I understand if you don't want that to be  
 broadcasted to a team of 10 TAs, thats ok but that should be really really  
 minimal. That should be the only time you send us email. And also again I'm  
 going on a maternity leave for a
 
 678
-00:74:04,000 --> 00:74:09,000
+01:14:04,000 --> 01:14:09,000
 few weeks starting the end of January so please if you decide you just
 
 679
-00:74:09,000 --> 00:74:15,000
+01:14:09,000 --> 01:14:15,000
 want to send email to me unless its my like due date for a baby
 
 680
-00:74:15,000 --> 00:74:20,000
+01:14:15,000 --> 01:14:20,000
 I'm likely to a reply you promptly sorry about that
 
 681
-00:74:20,000 --> 00:74:25,000
+01:14:20,000 --> 01:14:25,000
 priorities! (laughter)
 
 682
-00:74:25,000 --> 00:74:34,000
+01:14:25,000 --> 01:14:34,000
 So a couple of words about our philosophy We're not getting to the details  
 we really want
 
 683
-00:74:34,000 --> 00:74:39,000
+01:14:34,000 --> 01:14:39,000
 this to be a very hands-on project this is really I give a lot of credit to
 
 684
-00:74:39,000 --> 00:74:46,000
+01:14:39,000 --> 01:14:46,000
 Justin and Andrej they are extremely good at walking through these hands-on
 
 685
-00:74:46,000 --> 00:74:51,000
+01:14:46,000 --> 01:14:51,000
 details with you so that when you come out of this class you not only have  
 a
 
 686
-00:74:51,000 --> 00:74:57,000
+01:14:51,000 --> 01:14:57,000
 high-level understanding but you have thorough you have a really good  
 ability to build
 
 687
-00:74:57,000 --> 00:75:02,000
+01:14:57,000 --> 01:15:02,000
 your own deep learning code we want you to be exposed to state of the art
 
 688
-00:75:02,000 --> 00:75:08,000
+01:15:02,000 --> 01:15:08,000
 material you're gonna be learning things really that's as fresh as 2015 and  
 it'll
 
 689
-00:75:08,000 --> 00:75:09,000
+01:15:08,000 --> 01:15:09,000
 be fun you get to do things like this
 
 
 690
-00:75:09,000 --> 00:75:18,000
+01:15:09,000 --> 01:15:18,000
 Not all the time but like time the picture into Van Gough or this weird
 
 691
-00:75:18,000 --> 00:75:27,000
+01:15:18,000 --> 01:15:27,000
 thing it'll be a fun class in addition to all the important tasks you
 
 692
-00:75:27,000 --> 00:75:33,000
+01:15:27,000 --> 01:15:33,000
 learn we do have grading policies these are all on our website 
 
 693
-00:75:33,000 --> 00:75:44,000
+01:15:33,000 --> 01:15:44,000
 I'm not gonna iterate this Again one thing I'm gonna be very clear,  
 actually two things. One is late policy you are grown ups we treat you like
 
 694
-00:75:44,000 --> 00:75:51,000
+01:15:44,000 --> 01:15:51,000
 grown-ups we do not take anything at the end of the course "Oh my  
 professors want
 
 695
-00:75:51,000 --> 00:75:56,000
+01:15:51,000 --> 01:15:56,000
 me to go to this conference and I have to have like three more late days"  
 No
 
 696
-00:75:56,000 --> 00:76:03,000
+01:15:56,000 --> 01:16:03,000
 you are responsible for using your total late days you have 7 late you can  
 use
 
 697
-00:76:03,000 --> 00:76:11,000
+01:16:03,000 --> 01:16:11,000
 them in whatever way you want with 0 penalty beyond those you have to take  
 a penalty
 
 698
-00:76:11,000 --> 00:76:18,000
+01:16:11,000 --> 01:16:18,000
 Unless its like really really exceptional medical family emergency
 
 699
-00:76:21,000 --> 00:76:21,000
+01:16:21,000 --> 01:16:21,000
 talk to us on the individual basis but anything else
 
 700
-00:76:21,000 --> 00:76:29,000
+01:16:21,000 --> 01:16:29,000
 conference deadlines other final exams you know like missing cat or  
 whatever is
 
 701
-00:76:29,000 --> 00:76:37,000
+01:16:29,000 --> 01:16:37,000
 we budgeted that into the seven days another thing is honor code this is  
 one
 
 702
-00:76:37,000 --> 00:76:43,000
+01:16:37,000 --> 01:16:43,000
 thing I have to say it with a really straight face you are in such a  
 privileged
 
 703
-00:76:43,000 --> 00:76:50,000
+01:16:43,000 --> 01:16:50,000
 institution you are grown ups I want you to be responsible for honor
 
 704
-00:76:50,000 --> 00:76:55,000
+01:16:50,000 --> 01:16:55,000
 code every single Stanford student taking this class should know the honor  
 code
 
 705
-00:76:55,000 --> 00:76:58,000
+01:16:55,000 --> 01:16:58,000
 if you don't there's no excuse you should go back
 
 706
-00:76:58,000 --> 00:77:04,000
+01:16:58,000 --> 01:17:04,000
 we take collaboration extremely seriously I almost hate to say that  
 statistically
 
 707
-00:77:04,000 --> 00:77:10,000
+01:17:04,000 --> 01:17:10,000
 given a class this big were gonna have a few cases but I also want you to  
 be an
 
 708
-00:77:10,000 --> 00:77:16,000
+01:17:10,000 --> 01:17:16,000
 exceptional class even with a size this big we do not want to see anything  
 that
 
 709
-00:77:16,000 --> 00:77:23,000
+01:17:16,000 --> 01:17:23,000
 infringes on Academic Honor Code so read the collaboration policies and  
 respect that
 
 710
-00:77:23,000 --> 00:77:31,000
+01:17:23,000 --> 01:17:31,000
 this is really respecting yourself I think with all these prereq you can
 
 711
-00:77:31,000 --> 00:77:38,000
+01:17:31,000 --> 01:17:38,000
 you can read it yourself I'm done with anything I want to say is there any  
 burning
 
 712
-00:77:38,000 --> 00:77:42,000
+01:17:38,000 --> 01:17:42,000
 questions that you feel worth asking? yes ?? ??
